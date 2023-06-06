@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Practice_3</title>
+  </head>
+  <body>
+    <h1>JSON</h1>
+    Вывод данных осуществляется в консоль
+
+    <script>
+
+/* Этап 1. Подготовка данных */
+
+// JSON, который мы будем парсить
+const jsonString = `
+{
+ "list": [
+  {
+   "name": "Petr",
+   "age": "20",
+   "prof": "mechanic"
+  },
+  {
+   "name": "Vova",
+   "age": "60",
+   "prof": "pilot"
+  }
+ ]
+}
+`;
+// console.log('jsonString', jsonString);
+
+      
+const result = {
+    list: []
+}
+
+/* Этап 2. Получение данных */
+const data = JSON.parse(jsonString);
+// console.log('data', data);
+const list = data.list;
+// console.log('list', list);
+
+/* Этап 3. Запись данных в результирующий объект */
+for (let i of list) {
+    result.list.push(
+        {
+            name: i.name,
+            age: Number(i.age),
+            prof: i.prof
+        }
+    )
+}
+
+console.log('result', result);
+</script>
+    
+</body>
+</html>
