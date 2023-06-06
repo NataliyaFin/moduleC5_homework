@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Practice_5</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Задание_5</h1>
+
+  <label for="number1">номер страницы (от 1 до 10):</label>
+  <input type="number" id="page" name="page" value="1" required min="1" max="10" step="1" pattern=" 0+\.[0-9]*[1-9][0-9]*$" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+
+  <label for="number2">лимит (от 1 до 10):</label>
+  <input type="number" id="limit" name="limit" value="1" required min="1" max="10" step="1" pattern=" 0+\.[0-9]*[1-9][0-9]*$" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+  <br>
+  <button class="btn">запрос</button>
+  <div class="result">Здесь будет результат запроса</div>
+
+<script src="c_5_7.js"></script>
+</body>
+
+</html>
